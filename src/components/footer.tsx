@@ -3,7 +3,7 @@ import Link from "next/link";
 import LogoFull from "src/assets/svg/logo-full.svg";
 import Logo from "src/assets/svg/logo.svg";
 import FacebookImg from "../assets/images/facebook.jpg";
-import InstagramImg from "../assets/images/instagram.png";
+import InstagramImg from "../assets/images/insta.png";
 import Container from "./container";
 
 export type FooterProps = {};
