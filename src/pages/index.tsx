@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
 import blog from "src/assets/images/blog.png";
 import hero from "src/assets/images/hero.png";
@@ -17,6 +18,7 @@ console.log(aspectRatio, hero.width, hero.height);
 
 type IndexProps = {};
 const Index = ({}: IndexProps) => {
+  const router = useRouter();
   return (
     <React.Fragment>
       <section>
@@ -37,7 +39,9 @@ const Index = ({}: IndexProps) => {
               Refletindo diretamente a melhora na saúde do morador e no seu bem
               estar
             </p>
-            <Button>Solicite um orçamento</Button>
+            <Button onClick={() => router.push("/contato")}>
+              Solicite um orçamento
+            </Button>
           </div>
           <div className="hidden lg:block">
             <Image
@@ -156,7 +160,9 @@ das curas ativadas."
                   </span>
                 </div>
                 <div className="h-6" />
-                <Button>SAIBA MAIS SOBRE A ÂMAGO</Button>
+                <Button onClick={() => router.push("/sobre")}>
+                  SAIBA MAIS SOBRE A ÂMAGO
+                </Button>
               </div>
             </div>
           </div>
@@ -246,7 +252,9 @@ das curas ativadas."
                 quis.
               </p>
               <div className="h-6" />
-              <Button>Entre em contato</Button>
+              <Button onClick={() => router.push("/contato")}>
+                Entre em contato
+              </Button>
             </div>
           </div>
         </Container>
